@@ -1,0 +1,198 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3e6f5;
+    color: #6a4c9c;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Asegura que la página ocupe toda la altura */
+    overflow-x: hidden; /* Evita desbordamientos horizontales */
+  }
+  
+  h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #6a4c9c;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  /* Estilo para el contador */
+  #countdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .timer p {
+    font-size: 2rem;
+    margin: 0;
+    color: #6a4c9c;
+  }
+  
+  .time-unit {
+    font-size: 1.5rem;
+    color: #6a4c9c;
+    font-weight: 500;
+  }
+  
+  #special-day {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #6a4c9c;
+    margin-top: 10px;
+  }
+  
+
+  /* Estilo para el GIF o Foto Principal */
+#main-image {
+    width: 100%;
+    max-width: 600px; /* Ajusta el tamaño máximo */
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px; /* Bordes redondeados opcionales */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  }
+  
+  /* Animaciones de corazones con D23 */
+  @keyframes heart-float {
+    0% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(-30px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 0.5; }
+  }
+  
+  .heart {
+    font-size: 2.5rem;
+    color: #6a4c9c;
+    animation: heart-float 1.5s ease-in-out infinite;
+  }
+  
+  .heart.d23 {
+    font-size: 3rem;
+    color: #6a4c9c;
+    font-weight: bold;
+    animation: heart-float 2s ease-in-out infinite;
+  }
+  
+  /* Corazones flotando por toda la página */
+  .hearts-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0.8;
+  }
+  
+  .heart-item {
+    font-size: 2rem;
+    animation: heart-float 2s ease-in-out infinite;
+  }
+  
+  /* Álbum de fotos */
+  .photo-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .photo-gallery h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #6a4c9c;
+    margin-bottom: 20px;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 1000px;
+  }
+  
+  .gallery-item {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Botón de regreso */
+  #back-to-countdown {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #6a4c9c;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 200px;
+    width: 100%;
+  }
+  
+  #back-to-countdown:hover {
+    background-color: #a084d3;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  
+    #timer {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .timer p {
+      font-size: 2rem;
+    }
+  
+    .time-unit {
+      font-size: 1.2rem;
+    }
+  }
+  
+  
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  
